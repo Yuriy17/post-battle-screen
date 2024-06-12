@@ -1,0 +1,62 @@
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  background-color: $light-color;
+  color: $dark-color;
+}
+
+#post-battle-screen {
+  display: flex;
+  justify-content: space-around;
+  padding: $spacing-large;
+}
+
+.team {
+  border: 1px solid $dark-color;
+  padding: $spacing-unit;
+  width: 45%;
+
+  h2 {
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    padding: $spacing-unit;
+    margin: $spacing-small 0;
+    border: 1px solid $dark-color;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &.alive {
+      background-color: $success-color;
+    }
+
+    &.dead {
+      background-color: $danger-color;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      margin-right: $spacing-unit;
+    }
+
+    .tooltip {
+      position: absolute;
+      background-color: $light-color;
+      border: 1px solid $dark-color;
+      padding: $spacing-unit;
+      z-index: 1000;
+      top: 100%;
+      left: 0;
+      transform: translateY(10px);
+      box-shadow: 0 0 10px rgba($dark-color, 0.1);
+    }
+  }
+}
